@@ -1,0 +1,22 @@
+# 忽略windows生成的无关文件:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 忽略Python生成的无关文件:
+*.pyc
+*.so
+*.egg
+*.egg-info
+*.log
+dist
+build
+__pycache__/
+
+# 忽略pycharm的工程结构文件:
+idea/
+.idea/
+\.idea/
+
+# 其他需要忽略的文件:
+*_key_rsa
