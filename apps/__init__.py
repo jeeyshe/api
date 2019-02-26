@@ -8,5 +8,3 @@ __descriptions__ = """
     这个包用来装提供server服务
 """
 
-if __name__ == "__main__":
-    pass

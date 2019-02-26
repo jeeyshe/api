@@ -6,9 +6,18 @@
 
 ### 主要技术 flask + gunicorn + nginx 
 
-- 作用： 提供dev.tencent.com（原coding）的webhook转发服务
-- 作者： cn.lujianxin@gmail.com
+- 作用： 一些自己做的api
+- 作者： jeeysie@gmail.com
 - 时间： 2019-01-18
+
+### 服务模块
+
+##### 1. root , 一些项目整体的配置
+
+##### 2. apps , 一些应用模块
+
+- webhook 提供一些平台的webhook服务转发
+- link 提供网址压缩等一些关于网址的服务
 
 ### 开机自启说明
 

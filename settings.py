@@ -20,13 +20,17 @@ SERVER_NAME = 'api.isee.one' if not DEBUG else '127.0.0.1:5000'
 
 SECRET_KEY = '2019/01/19-start-webhook-server-use-this-key'
 
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+
 # 错误处理
-MSG_FOR_400 = {'code': 400, 'msg': 'bad request, invalid params maybe'}
-MSG_FOR_401 = {'code': 401, 'msg': 'permission denied'}
-MSG_FOR_403 = {'code': 403, 'msg': 'action forbidden'}
-MSG_FOR_404 = {'code': 404, 'msg': 'url not found'}
-MSG_FOR_405 = {'code': 405, 'msg': 'method not allowed'}
-MSG_FOR_500 = {'code': 500, 'msg': 'server error occurred'}
+ERRORS = {
+    400: {'code': 400, 'msg': 'bad request, invalid params maybe'},
+    401: {'code': 401, 'msg': 'permission denied'},
+    403: {'code': 403, 'msg': 'action forbidden'},
+    404: {'code': 404, 'msg': 'url not found'},
+    405: {'code': 405, 'msg': 'method not allowed'},
+    500: {'code': 500, 'msg': 'server error occurred'},
+}
 
 # 转发给钉钉的api
 API_DINGTALK = 'https://oapi.dingtalk.com/robot/send?access_token={}'
@@ -83,6 +87,3 @@ FILE_TITLE_REMOVE = '有文件被删除！'
 FILE_UPLOAD = '[{user}]上传了文件:{file}'
 FILE_RENAME = '[{user}]将一个文件重命名为[{new}]'
 FILE_REMOVE = '[{user}]删除了文件:{file}'
-
-if __name__ == "__main__":
-    pass

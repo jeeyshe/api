@@ -9,14 +9,11 @@ __descriptions__ = """
 """
 
 import json
-from flask import Blueprint, request, Response
+from flask import request, Response
 
 from apps.webhook.parse import parse_json_data
 
-app_webhook = Blueprint('app_webhook', __name__)
 
-
-@app_webhook.route('/tencent-to-dingtalk/send', methods=['POST', 'HEADER', 'GET'])
 def tencent_to_dingtalk():
     """
     腾讯云开发者平台和钉钉的webhook转发服务器
