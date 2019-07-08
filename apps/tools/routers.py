@@ -7,8 +7,8 @@
 
 from flask import Blueprint
 
-from apps.link import views
+from apps.tools import views
 
-app = Blueprint('link', __name__)
+app = Blueprint('tools', __name__)
 
-app.add_url_rule(rule='/zip/', endpoint='zip', view_func=views.LinkZip.as_view('zip'), methods=['GET', 'POST'])
+app.add_url_rule('/echo', endpoint='echo', view_func=views.http_echo_view, methods=['POST'])

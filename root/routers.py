@@ -9,7 +9,7 @@ from flask import Blueprint
 
 from root import views
 
-app = Blueprint('root', __name__) # 此处的root是一个命名空间, 配合endpoint组合指定反向url, 例如root.index
+app = Blueprint('root', __name__)  # 此处的root是一个命名空间, 配合endpoint组合指定反向url, 例如root.index
 
 # --------------------------------------------- #
 # 首页视图

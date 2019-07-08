@@ -4,7 +4,7 @@ from flask import Flask
 
 from settings import *
 from apps.webhook.routers import app as webhook_app
-from apps.link.routers import app as linkzip_app
+from apps.tools.routers import app as tools_app
 from root import handler
 from root.routers import app as root_app
 
@@ -21,8 +21,8 @@ app.config.update(
 app.register_blueprint(blueprint=root_app)
 # webhook服务
 app.register_blueprint(blueprint=webhook_app, url_prefix='/webhook')
-# 网址压缩
-app.register_blueprint(blueprint=linkzip_app, url_prefix='/link')
+# 一些工具
+app.register_blueprint(blueprint=tools_app, url_prefix='/tools')
 
 # --------------------------------------------- #
 # 添加错误处理响应

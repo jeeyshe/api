@@ -14,9 +14,9 @@ import sys
 BASE_DIR = os.path.dirname(__file__)
 sys.path.insert(0, BASE_DIR)
 
-DEBUG = False
+DEBUG = True
 
-SERVER_NAME = 'api.isee.one' if not DEBUG else '127.0.0.1:5000'
+SERVER_NAME = 'api.xoo.site' if not DEBUG else '127.0.0.1:5000'
 
 SECRET_KEY = '2019/01/19-start-webhook-server-use-this-key'
 
@@ -87,3 +87,7 @@ FILE_TITLE_REMOVE = '有文件被删除！'
 FILE_UPLOAD = '[{user}]上传了文件:{file}'
 FILE_RENAME = '[{user}]将一个文件重命名为[{new}]'
 FILE_REMOVE = '[{user}]删除了文件:{file}'
+
+AUTH_TOKEN = {
+    'Auth-Token': 'api.xoo.site',
+}
