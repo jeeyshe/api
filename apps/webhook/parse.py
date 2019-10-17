@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 __descriptions__ = """
-* Auhtor: lujianxin@magexiot.com
+* Auhtor: jeeyshe@gmail.com
 * Env: py3.6.5 
 * Time: 19-1-17 下午3:31
 * IDE: PyCharm
@@ -13,9 +13,9 @@ from settings import *
 
 
 def parse_json_data(access_token, data=None):
-    """解析钉钉发来的数据"""
+    """解析coding发来的数据"""
     if data is None:
-        return {'code': 0, 'msg': 'Nothing to do'}
+        return {}
 
     result = None
     if 'zen' in data:
