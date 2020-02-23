@@ -14,6 +14,6 @@ from flask import Response
 
 def handler(dic):
     def response(e):
-        return Response(json.dumps(dic))
+        return Response(json.dumps(dic), content_type='application/json')
 
     return response
